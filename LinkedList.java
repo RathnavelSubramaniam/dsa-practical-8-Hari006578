@@ -60,12 +60,26 @@ int data,data1;
             list.displayList();
           }
         }
-    }
-      public void insertEnd(int data) 
-    {    
-       //TYPE YOUR CODE HERE 
-    }  
-     
+    }       
+     public void insertEnd(int data)
+{
+Node newNode = new Node(data);
+if(head == null)
+{
+head = newNode;
+tail = newNode;
+}
+else
+{
+Node temp=head;
+while( temp.next!= null)
+{
+temp = temp.next;
+}
+temp.next=newNode;
+System.out.println("ELEMENT INSERTED");
+}
+} 
 public void displayList() {
         Node current = head;
         while (current != null) {
